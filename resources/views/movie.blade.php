@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Document</title>
+    <title>model - controller</title>
 </head>
 <body>
     <main>
@@ -18,11 +18,11 @@
                 @foreach($movies as $movie)
                     <div class="card">
                         <div>
-                            <h5>{{$movie->title}}</h5>
+                            <h5 class="font-weight-bold">Titolo-{{$movie->title}}</h5>
                             <p>{{$movie->original_title}}</p>
-                            <p>{{$movie->nationality}}</p>
-                            <p>{{$movie->date}}</p>
-                            <p>{{$movie->vote}}</p>
+                            <p class="font-weight-bold">Country- <em>{{$movie->nationality}}</em></p>
+                            <p class="font-weight-bold">Date Movie- <em>{{$movie->date}}</em></p>
+                            <p class="font-weight-bold">Vote- <em>{{$movie->vote}}</em></p>
                         </div>
                     </div>
                 @endforeach
