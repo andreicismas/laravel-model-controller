@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Movie;
+
 class HomeControler extends Controller
 {
     public function index(){
@@ -12,9 +14,9 @@ class HomeControler extends Controller
         $data = [
             "movies" => movie::all()
         ];
-        var_dump($data);
-        return view("home", $data);
+        // var_dump($data);
+        return view("movie", $data);
     
         
-        }
+    }
 }

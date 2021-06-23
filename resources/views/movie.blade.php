@@ -12,7 +12,23 @@
     <title>Document</title>
 </head>
 <body>
-   
+    <main>
+        <div class="container"> 
+            <div class="row">
+                @foreach($movies as $movie)
+                    <div class="card">
+                        <div>
+                            <h5>{{$movie->title}}</h5>
+                            <p>{{$movie->original_title}}</p>
+                            <p>{{$movie->nationality}}</p>
+                            <p>{{$movie->date}}</p>
+                            <p>{{$movie->vote}}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </main>
    
 </body>
 </html>
